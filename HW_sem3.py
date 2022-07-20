@@ -6,39 +6,39 @@ from ast import Num
 from random import randint
 
 
-# def sum_odd_numbers(lst):
-#     sum = 0
-#     for i in range(len(lst)):
-#         if i % 2 != 0:
-#             sum += lst[i]
-#     print(f"Сумма равна: {sum}")
+def sum_odd_numbers(lst):
+    sum = 0
+    for i in range(len(lst)):
+        if i % 2 != 0:
+            sum += lst[i]
+    print(f"Сумма равна: {sum}")
 
-# lst = [2, 3, 5, 9, 3]
-# sum_odd_numbers(lst)
-# lst = list(map(int, input("Введите числа через пробел:\n").split()))
-# sum_odd_numbers(lst)
+lst = [2, 3, 5, 9, 3]
+sum_odd_numbers(lst)
+lst = list(map(int, input("Введите числа через пробел:\n").split()))
+sum_odd_numbers(lst)
 #2 - Напишите программу, которая найдёт произведение пар чисел списка. 
 # Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 #*Пример:*
 #- [2, 3, 4, 5, 6] => [12, 15, 16];
 #- [2, 3, 5, 6] => [12, 15]
 
-# def mult_of_pairs_lst(lst):
-#     new_lst =[]
-#     if len(lst) % 2 != 0:
-#         l = len(lst)//2 + 1 
-#     else: 
-#         l = len(lst)//2
-#     new_lst = [lst[i]*lst[len(lst)-i-1] for i in range(l)]
-#     print(f'sum of pairs of elements {new_lst}')
+def mult_of_pairs_lst(lst):
+    new_lst =[]
+    if len(lst) % 2 != 0:
+        l = len(lst)//2 + 1 
+    else: 
+        l = len(lst)//2
+    new_lst = [lst[i]*lst[len(lst)-i-1] for i in range(l)]
+    print(f'sum of pairs of elements {new_lst}')
 
-# # lst = [2, 3, 4, 5, 6]
-# # mult_of_pairs_lst(lst)
-# # lst = list(map(int, input("Введите числа через пробел:\n").split()))
-# # mult_of_pairs_lst(lst)
-# lst = [randint(1, 11) for _ in range(6)]
-# print(f'random list  {lst}')
+# lst = [2, 3, 4, 5, 6]
 # mult_of_pairs_lst(lst)
+# lst = list(map(int, input("Введите числа через пробел:\n").split()))
+# mult_of_pairs_lst(lst)
+lst = [randint(1, 11) for _ in range(6)]
+print(f'random list  {lst}')
+mult_of_pairs_lst(lst)
 #3 - Задайте список из вещественных чисел. Напишите программу, 
 # которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
 #*Пример:*
